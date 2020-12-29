@@ -1,0 +1,65 @@
+@import "./common";
+
+.ImageGallery {
+  padding-top: 3rem;
+  padding-bottom: 2rem;
+  .title {
+    margin-bottom: 1rem;
+  }
+  .image {
+    width: 100%;
+    height: 16rem;
+    margin-bottom: 2rem;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      .imageInner {
+        transform: scale(1.1);
+      }
+    }
+    .imageInner {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-position: center;
+      background-size: cover;
+      transition: transform 0.5s ease;
+    }
+  }
+}
+
+.ImagePopup {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2000;
+  background-color: rgba(0, 0, 0, 0.9);
+
+  display: grid;
+  grid-template-rows: 1fr auto;
+  &.hidden {
+    display: none;
+  }
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    color: white;
+  }
+  .image {
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .label {
+    padding-top: 0.5rem;
+    @include font-size(2rem);
+    color: white;
+    text-align: center;
+  }
+}

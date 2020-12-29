@@ -1,0 +1,40 @@
+@import "./common";
+
+.ImageHeader {
+  position: relative;
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  overflow: hidden;
+}
+
+.headerText {
+  color: white;
+  .subTitle {
+    @include font-size(2rem);
+  }
+}
+
+.headerBackground {
+  position: absolute;
+  top: -10px;
+  bottom: -10px;
+  left: -10px;
+  right: -10px;
+  background-position: center;
+  background-size: cover;
+  filter: saturate(50%) brightness(50%) blur(2px);
+  z-index: -10;
+
+  animation: zoomOut 1s ease-out;
+}
+
+@keyframes zoomOut {
+  0% {
+    top: -100px;
+    bottom: -100px;
+    left: -100px;
+    right: -100px;
+  }
+  100% {
+  }
+}
