@@ -8,7 +8,7 @@ const gallery: Gallery = {
   images: [
     {
       src: `${basePath}/tmp.png`,
-      description: "Temp",
+      description: "Placeholder Image",
     },
   ],
 };
