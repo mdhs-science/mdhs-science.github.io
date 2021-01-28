@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "next export && touch out/.nojekyll && gh-pages -t -d out && rimraf out"
+    "deploy": "next build && next export && touch out/.nojekyll && gh-pages -t -d out && rimraf out"
   },
   "dependencies": {
     "@thesilican/react-google-maps": "^0.4.1",

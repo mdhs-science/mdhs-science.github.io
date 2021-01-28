@@ -1,4 +1,5 @@
 import cn from "classnames";
+import { useRouter } from "next/router";
 import React from "react";
 import { Button, Col, Container, Image, Row } from "react-bootstrap";
 import CenterContainer from "../components/CenterContainer";
@@ -70,7 +71,9 @@ export default function Home() {
         <CenterContainer className={styles.galleryText}>
           <h1>Gallery</h1>
           <p>Check out our gallery</p>
-          <Button>View Gallery</Button>
+          <a href="/gallery">
+            <Button>View Gallery</Button>
+          </a>
         </CenterContainer>
         <div
           className={styles.galleryBackground}

@@ -15,9 +15,9 @@ export default function ImageHeader(props: ImageHeaderProps) {
     <div className={styles.ImageHeader}>
       <CenterContainer className={styles.headerText}>
         <h1 className={cn("display-1")}>{props.title}</h1>
-        <p className={styles.subTitle}>
-          <ReactMarkdown>{props.subTitle}</ReactMarkdown>
-        </p>
+        <ReactMarkdown className={styles.subTitle}>
+          {props.subTitle}
+        </ReactMarkdown>
       </CenterContainer>
       <div
         className={styles.headerBackground}
